@@ -67,6 +67,17 @@ app.get('/bad',(req,res)=>{
     });
 
 });
+app.get('/projects',(req,res)=>{
+
+    //res.send('<h3> This is the about us page </h3>');
+    res.render('projects.hbs',{
+        pageTitle:'projects page',
+        year: new Date().getFullYear()
+    });
+
+});
+
+
 app.listen(port,()=>{
     console.log('Server is up on port '+port);
 });
